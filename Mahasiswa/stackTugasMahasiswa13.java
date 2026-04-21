@@ -75,4 +75,19 @@ public class stackTugasMahasiswa13 {
         }
         System.out.println("");
     }
+
+    // Tambahan Praktikum 2 - konversi desimal ke biner
+    public String konversiDesimalKeBiner(int nilai) {
+        StackKonversi stackBiner = new StackKonversi();
+        while (nilai > 0) {
+            int sisa = nilai % 2;
+            stackBiner.push(sisa);
+            nilai = nilai / 2;
+        }
+        String biner = new String();
+        while (!stackBiner.isEmpty()) {
+            biner += stackBiner.pop();
+        }
+        return biner;
+    }
 }
